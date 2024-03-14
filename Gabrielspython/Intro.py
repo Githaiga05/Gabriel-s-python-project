@@ -55,7 +55,7 @@ print(full_name)
 #string to integer
 pens_total=40
 books_total="50"
-grand_total=int(books_total)+pens_total#init is adding them
+grand_total=int(books_total)+pens_total#int is adding them
 print("my overall total is:" ,grand_total)
 
 #float to string
@@ -69,8 +69,9 @@ print(result)
 #The while loop
 i = 1
 while i < 6:
-  print(i)
+  print("the value of i:",i)
   i += 1
+
 
   #break stops the loop
 i = 1
@@ -80,6 +81,7 @@ while i < 6:
     break
   i += 1
 
+
 #the continue statement in the while loop
   i = 1
   while i < 6:
@@ -87,3 +89,40 @@ while i < 6:
       if i == 3: #if 3 is equals to 3 it jumps it
           continue
       print("the answer is",i)
+
+student_name=input("Enter your student name:")
+while student_name == "":
+    print("Please enter your name") #when you put a text on the same indent as while its gonna be outside the loop
+    student_name = input("Enter your student name:")
+else:
+    print("hello", student_name)
+
+
+def identify_visitors():
+    kenyan_visitors = [6]
+    ugandan_visitors = [4]
+
+    num_visitors = 6
+    count = 0
+
+    while count < num_visitors:
+        nationality = input("Enter the nationality of visitor {}: ".format(count + 1))
+
+        if nationality.lower() == "kenya":
+            kenyan_visitors.append("Visitor {}".format(count + 1))
+        elif nationality.lower() == "uganda":
+            ugandan_visitors.append("Visitor {}".format(count + 1))
+
+        count += 1
+
+    print("\nKenyan Visitors:")
+    for visitor in kenyan_visitors:
+        print(visitor)
+
+    print("\nUgandan Visitors:")
+    for visitor in ugandan_visitors:
+        print(visitor)
+
+
+if __name__ == "__main__":
+    identify_visitors()
