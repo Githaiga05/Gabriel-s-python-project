@@ -81,7 +81,7 @@ while i < 6:
     break
   i += 1
 
-
+'''
 #the continue statement in the while loop
   i = 1
   while i < 6:
@@ -96,33 +96,31 @@ while student_name == "":
     student_name = input("Enter your student name:")
 else:
     print("hello", student_name)
+'''
+
+#The range function
+for x in range(2, 30, 3):
+  print(x)
+
+'''
+#nested loops
+adj = ["red", "big", "tasty"]
+fruits = ["apple", "banana", "cherry"]
+
+for x in adj:
+  for y in fruits:
+    print(x,y)
+'''
+
+adj = ["red"]
+fruits = ["apple", "banana", "cherry"]
+
+for x in adj:
+  for y in fruits:
+    z=1
+    while z<=3:
+      print(x,y)
+      z+=1
 
 
-def identify_visitors():
-    kenyan_visitors = [6]
-    ugandan_visitors = [4]
 
-    num_visitors = 6
-    count = 0
-
-    while count < num_visitors:
-        nationality = input("Enter the nationality of visitor {}: ".format(count + 1))
-
-        if nationality.lower() == "kenya":
-            kenyan_visitors.append("Visitor {}".format(count + 1))
-        elif nationality.lower() == "uganda":
-            ugandan_visitors.append("Visitor {}".format(count + 1))
-
-        count += 1
-
-    print("\nKenyan Visitors:")
-    for visitor in kenyan_visitors:
-        print(visitor)
-
-    print("\nUgandan Visitors:")
-    for visitor in ugandan_visitors:
-        print(visitor)
-
-
-if __name__ == "__main__":
-    identify_visitors()

@@ -26,3 +26,8 @@ def identify_visitors():
 
 if __name__ == "__main__":
     identify_visitors()
+
+
+
+for x in range(2, 30, 3):
+  print(x)
